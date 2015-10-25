@@ -1,0 +1,87 @@
+@CHARSET "UTF-8";
+
+html {
+	font-family: cursive;
+	font-size: 12px;
+}
+body {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 8px;
+}
+a {
+	font-weight: bold;
+	color: #003399;
+}
+h1 {
+	background: url(../imagens/tela.png) no-repeat 0px 3px;
+	padding-left: 24px;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #3e3e3e;
+	letter-spacing: -1px;
+}
+
+container {
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 700px;
+}
+
+.cabecalho {
+	padding: 10px;
+	background: #746F6F;
+	text-align: center;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	
+}
+
+table {
+	border-spacing: 1;
+	border-collapse: collapse;
+}
+
+.table {
+	border-collapse: collapse !important;
+}
+
+.btn {
+	padding: 2px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #BABABA;
+	border-color: #E6E2E2;
+	border-radius: 10px;
+}
+
+.btnnovo {
+	width:100px;
+	background-color: #0EBB31;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:3px;
+	padding-top:3px;
+	font-size: 16px;
+	font-weight:bold;
+	color: #fff;
+	border-color: #E6E2E2;
+	border-radius: 5px;
+}
+
+.btnconsulta {
+	width:100px;
+	background-color: #F5A40C;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:3px;
+	padding-top:3px;
+	font-size: 16px;
+	font-weight:bold;
+	color: #fff;
+	border-color: #E6E2E2;
+	border-radius: 5px;
+}
