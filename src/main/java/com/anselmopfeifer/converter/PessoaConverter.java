@@ -7,21 +7,23 @@ import javax.faces.convert.FacesConverter;
 import org.hibernate.Session;
 
 import com.anselmopfeifer.model.Pessoa;
+import com.anselmopfeifer.repository.Pessoas;
+import com.anselmopfeifer.util.FacesUtil;
 import com.anselmopfeifer.util.HibernateUtil;
+import com.anselmopfeifer.util.Repositorios;
 
 @FacesConverter(forClass=Pessoa.class)
 public class PessoaConverter implements Converter {
+	
+	private Repositorios repositorios = new Repositorios();
 
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
 		Pessoa retorno = null;
 		
 		if (value != null) {
-			Session session = HibernateUtil.getSession();
-			
-			retorno = (Pessoa) session.get(Pessoa.class, new Integer(value));
-			
-			session.close();
+			Pessoas pessoas = repositorios.getPessoas();
+			retorno = pessoas.porCodigo(new Integer(value));
 		}
 		
 		return retorno;

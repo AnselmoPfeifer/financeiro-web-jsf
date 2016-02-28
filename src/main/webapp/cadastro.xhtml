@@ -4,17 +4,20 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core">
+	<f:metadata>
+		<f:viewParam name="codigo" value="#{cadastroLancamentoBean.lancamento}" />
+	</f:metadata>
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Cadastro - 24-Conhecendo o Hibernate</title>
+	
+	<title>#{cadastroLancamentoBean.editando ? 'Editando lançamento' : 'Novo lançamento'}</title>
 	<h:outputStylesheet library="css" name="sistema-cadastro.css" />
 	<h:outputStylesheet library="css" name="style.css" />
 
 </h:head>
 <h:body styleClass="container">
-	<h1 class="cabecalho">Formulario de cadastro de produtos</h1>
+	<h1 class="cabecalho">#{cadastroLancamentoBean.editando ? 'Editando lançamento' : 'Novo lançamento'}</h1>
 	<h:form id="frm">
-		<h:button value="Novo" styleClass="btnnovo" outcome="cadastro" />
 		<h:button value="Consulta" styleClass="btnconsulta" outcome="consulta" />
 
 		<h:messages showDetail="false" showSummary="true"
@@ -75,7 +78,8 @@
 				</h:inputText>
 				
 				<h:outputLabel/>
-				<h:commandButton value="Cadastrar" action="#{cadastroLancamentoBean.cadastrar}" />
+				<h:commandButton styleClass="btnnovo" value="Salvar" 
+				action="#{cadastroLancamentoBean.salvar}" />
 
 				
 		</h:panelGrid>

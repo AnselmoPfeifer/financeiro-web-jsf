@@ -59,7 +59,6 @@ table {
 }
 
 .btnnovo {
-	width:100px;
 	background-color: #0EBB31;
 	padding-left:5px;
 	padding-right:5px;
@@ -84,4 +83,15 @@ table {
 	color: #fff;
 	border-color: #E6E2E2;
 	border-radius: 5px;
+}
+.error{
+	padding: 7px;
+	color: #E51717;
+	list-style-image:none;
+}
+
+.info{
+	padding: 7px;
+	color: #14A42A;
+	list-style-image:none;
 }
